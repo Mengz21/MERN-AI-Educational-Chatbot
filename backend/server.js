@@ -7,6 +7,7 @@ const mongoose = require('mongoose')
 
 //require the router files 
 const workoutRoutes = require('./routes/workouts')
+const chatbotRoutes = require('./routes/chatbot'); 
 
 // start up the express app, we stored it in the app constant 
 const app = express()
@@ -45,6 +46,8 @@ app.use((req, res, next) => {
 //app.use(workoutRoutes)
 // actually, we want to only fire these routes when we've reached a specific path, so: 
 app.use('/api/workouts/', workoutRoutes)
+app.use('/api/chatbot', chatbotRoutes); // Use the chatbot router on the '/api/chatbot' route
+
 // so when we fire a request to this route '/api/workouts/', use these routes workoutRoutes
 // THIS MEANS THAT THE ROUTES SPECIFIED IN WORKOUTROUTES GETS ADDED TO THE END OF /api/workouts 
 // '/' becomes '/api/workouts/' 
@@ -68,6 +71,3 @@ mongoose.connect(process.env.MONG_URI)
 
 
 
-// mfzhang99
-// YMRS7tvcsCcbPVus
-// 63.235.138.196/32   My IP Address
