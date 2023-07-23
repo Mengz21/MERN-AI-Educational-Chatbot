@@ -1,28 +1,35 @@
 const express = require('express');
 const router = express.Router();
 
-// Import chatbot controller functions
+// Import the chatbot controller functions
 const {
   processChatMessage,
   startNewChat,
   deleteChat,
   getChatById,
-  getAllChats
+  getAllChats,
+  updateTitle
 } = require('../controllers/chatbotController');
 
-// Handle POST request to '/api/chatbot'
-router.post('/', processChatMessage);
 
-// Handle POST request to '/api/chatbot/start'
+
+// Handle POST request to start a new chat
 router.post('/start', startNewChat);
+// Handle POST request to send a message
+router.post('/', processChatMessage);
+//router.post('/', getAllChats);
+router.post('/:id/title', updateTitle);
 
-// Handle DELETE request to '/api/chatbot/:id'
+// Handle POST request to send a message to a specific chat by ID
+router.post('/:id', processChatMessage);
+
+// Handle DELETE request to delete a chat by ID
 router.delete('/:id', deleteChat);
 
-// Handle GET request to '/api/chatbot/:id'
+// Handle GET request to get a chat by ID /api/chatbot/:id
 router.get('/:id', getChatById);
 
-// Handle GET request to '/api/chatbot'
+// Handle GET request to get all chats
 router.get('/', getAllChats);
 
 module.exports = router;

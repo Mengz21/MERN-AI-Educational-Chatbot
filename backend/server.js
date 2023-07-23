@@ -5,9 +5,13 @@ const express = require('express')
 
 const mongoose = require('mongoose')
 
+
 //require the router files 
 const workoutRoutes = require('./routes/workouts')
 const chatbotRoutes = require('./routes/chatbot'); 
+
+const chatbotController = require('./controllers/chatbotController');
+
 
 // start up the express app, we stored it in the app constant 
 const app = express()
@@ -47,6 +51,8 @@ app.use((req, res, next) => {
 // actually, we want to only fire these routes when we've reached a specific path, so: 
 app.use('/api/workouts/', workoutRoutes)
 app.use('/api/chatbot', chatbotRoutes); // Use the chatbot router on the '/api/chatbot' route
+
+app.post('/api/chatbot', chatbotController.processChatMessage);
 
 // so when we fire a request to this route '/api/workouts/', use these routes workoutRoutes
 // THIS MEANS THAT THE ROUTES SPECIFIED IN WORKOUTROUTES GETS ADDED TO THE END OF /api/workouts 
