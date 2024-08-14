@@ -108,14 +108,14 @@ div.error {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 5px; /* Update padding */
+  padding: 5px; 
 }
 
 .navbar a {
   color: #003366; /* Deep blue */
   font-weight: bold;
   text-align: center;
-  padding: 5px 16px; /* Update padding */
+  padding: 5px 16px; 
   text-decoration: none;
   transition: background-color 0.3s, color 0.3s;
 }
@@ -159,7 +159,7 @@ div.error {
   background-color: #ffffff;
   padding: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  margin-left: auto; /* Add this line to align the chatbot to the right */
+  margin-left: auto; 
 }
 
 
@@ -170,29 +170,29 @@ div.error {
 }
 
 .chatbot-message {
-  background-color: #f1f1f1; /* Update background color */
+  background-color: #f1f1f1; 
   padding: 10px;
   margin-bottom: 5px;
-  border-radius: 4px; /* Add border radius */
+  border-radius: 4px; 
 }
 
 .chatbot-response {
   background-color: #e6f2ff;
-  color: #333; /* Update text color */
+  color: #333;
 }
 
 .chatbot-input {
   display: flex;
   align-items: center;
-  margin-top: 10px; /* Add margin top */
+  margin-top: 10px; 
 }
 
 .chatbot-input input {
   flex-grow: 1;
   padding: 5px;
   margin-right: 5px;
-  border: 1px solid #ccc; /* Add border */
-  border-radius: 4px; /* Add border radius */
+  border: 1px solid #ccc; 
+  border-radius: 4px; 
 }
 
 .chatbot-input button {
@@ -206,13 +206,13 @@ div.error {
 }
 
 .chatbot-input button:hover {
-  background-color: #1aac83; /* Update hover background color */
+  background-color: #1aac83; 
 }
 
 .start-chat-btn {
   position: absolute;
-  top: 130px; /* Adjust the top position to create space between the button and the navbar */
-  left: 20px; /* Adjust the left position to your desired distance from the left edge */
+  top: 130px; 
+  left: 20px; 
   padding: 10px;
   background-color: var(--primary);
   border: 0;
