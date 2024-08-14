@@ -1,6 +1,4 @@
 import { BrowserRouter, Routes, Route} from 'react-router-dom'
-
-// chatgpt imports 
 import React from 'react';
 import { Switch } from 'react-router-dom';
 
@@ -8,10 +6,9 @@ import { Switch } from 'react-router-dom';
 import Home from './pages/Home'
 import ChatbotPage from './pages/Chatbot'; // Import the chatbot page component
 
-//import Navbar from './components/Navbar'
 import Navbar from './components/Navbar'
 
-// first one: home (react) component being rendered for the root path 
+// home (react) component being rendered for the root path 
 function App() {
   return (
     <div className="App">
